@@ -1,0 +1,28 @@
+FROM apache/airflow:2.7.0
+
+USER root
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        postgresql-client \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+USER airflow
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r /tmp/requirements.txt
+
+USER root
+RUN rm -f /tmp/requirements.txt
+
+COPY dags/ /opt/airflow/dags/
+COPY app/ /opt/airflow/app/
+
+RUN chown -R airflow:root /opt/airflow/dags /opt/airflow/app && \
+    echo 'export PYTHONPATH="${PYTHONPATH}:/opt/airflow/app"' >> /opt/airflow/.bashrc && \
+    echo 'export PYTHONPATH="${PYTHONPATH}:/opt/airflow/app"' >> /home/airflow/.bashrc
+
+USER airflow
+
+ENV PYTHONPATH="${PYTHONPATH}:/opt/airflow/app"
