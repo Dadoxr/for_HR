@@ -6,4 +6,4 @@
 
 **HH & SJ бот**: [Ссылка](https://github.com/Dadoxr/vacancy_project)
 
-**Сайт на Django (postgres)**  [Ссылка](https://github.com/Dadoxr/DjangoHW) 
+**Сайт на Django (postgres)**  [Ссылка](https://github.com/Dadoxr/django_main) 
