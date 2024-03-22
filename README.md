@@ -5,3 +5,5 @@
 **Вакансионный бот HH.ru и SuperJob**: [Ссылка](https://github.com/Dadoxr/vacancy_project)
 
 **Сайт на Django (postgres)**  [Ссылка](https://github.com/Dadoxr/django_main) 
+
+**Django telegram login**  [Ссылка](https://github.com/Dadoxr/django-telegram-login) 
