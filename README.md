@@ -4,4 +4,4 @@
 
 **Сайт на Django (PostgreSQL)**  [Ссылка](https://github.com/Dadoxr/django_main)  
 
-**Auth (FastAPI)** - [ссылка](https://github.com/Dadoxr/fast_api)
+**Auth (FastAPI, SQLAlchemy, Docker Compose)** - [ссылка](https://github.com/Dadoxr/fast_api)
